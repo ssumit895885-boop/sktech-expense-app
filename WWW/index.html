@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkTech Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1 id="app-title">SkTech</h1>
+
+        <div id="language-switcher" style="text-align: right; margin-bottom: 15px;">
+            <select id="lang-select">
+                <option value="hi">हिंदी (Hindi)</option>
+                <option value="en">English (अंग्रेजी)</option>
+            </select>
+        </div>
+
+        <header id="dashboard" class="dashboard-card">
+            <h2>मासिक वित्तीय स्वास्थ्य</h2>
+            <div class="summary">
+                <p data-key="p_income">कुल आय: ₹<span id="total-income">0.00</span></p>
+                <p data-key="p_spent">कुल खर्च: ₹<span id="total-spent">0.00</span></p>
+                <p data-key="p_balance">वर्तमान शेष: ₹<span id="total-balance">0.00</span></p>
+                <p class="remaining" data-key="p_remaining">बजट शेष: ₹<span id="budget-remaining">0.00</span></p>
+            </div>
+
+            <div id="chart-container">
+                <h4 data-key="h4_chart">खर्चों का वितरण</h4>
+            </div>
+        </header>
+
+        <section id="expense-form" class="form-card">
+            <h3 data-key="h3_new">नया लेनदेन दर्ज करें</h3>
+            <form id="add-expense-form">
+                <input type="number" id="amount" placeholder="राशि (₹)" required> 
+                <select id="category" required>
+                    <option value="" data-key="opt_select">श्रेणी चुनें</option>
+                    <option value="Food" data-key="opt_food">भोजन (Food)</option>
+                    <option value="Transport" data-key="opt_transport">परिवहन (Transport)</option>
+                    <option value="Bills" data-key="opt_bills">बिल (Bills)</option>
+                    <option value="Shopping" data-key="opt_shopping">खरीदारी (Shopping)</option>
+                    <option value="Income" data-key="opt_income">आय (Income)</option>
+                </select>
+                <input type="date" id="date" value="" required> 
+                <input type="text" id="description" placeholder="विवरण (जैसे: मेट्रो किराया)">
+                <button type="submit" data-key="btn_add">लेनदेन जोड़ें</button>
+            </form>
+        </section>
+
+        <section id="expense-list" class="list-card">
+            <h3 data-key="h3_recent">हाल की गतिविधियाँ</h3>
+            <ul id="transactions">
+                <li data-key="li_none">कोई लेनदेन नहीं</li>
+            </ul>
+        </section>
+    </div> <section id="full-summary-section" class="list-card" style="display:none; margin-top: 20px;">
+        <h3 data-key="h3_full_summary">सभी लेनदेन और फ़िल्टर</h3>
+        
+        <div class="filter-controls" style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee;">
+            <p style="font-weight: bold; margin-bottom: 5px;">फ़िल्टर करें:</p>
+            <select id="filter-category" style="width: 48%; padding: 8px; border-radius: 6px; margin-right: 4%;">
+                <option value="all" data-key="opt_all_cat">सभी श्रेणियाँ</option>
+            </select>
+            <select id="filter-type" style="width: 48%; padding: 8px; border-radius: 6px;">
+                <option value="all" data-key="opt_all_type">आय और खर्च</option>
+                <option value="expense" data-key="opt_expense_type">केवल खर्च</option>
+                <option value="income" data-key="opt_income_type">केवल आय</option>
+            </select>
+        </div>
+
+        <h4 id="filtered-total" style="color: #2c3e50; font-size: 1.2em; margin-bottom: 10px;">कुल फ़िल्टर राशि: ₹0.00</h4>
+        
+        <ul id="full-transactions-list">
+            <li>कोई लेनदेन नहीं</li>
+        </ul>
+        <button id="close-summary-btn" data-key="btn_close_summary" style="background-color: #f39c12; color: white; border: none; padding: 10px 15px; border-radius: 6px; width: 100%; margin-top: 20px;">वापस जाएं</button>
+    </section>
+
+    <footer id="developer-info" style="text-align: center; margin-top: 30px; padding: 15px 0; font-size: 0.85em; color: #7f8c8d;">
+        <p>SkTech Expense Tracker</p>
+        <p>&copy; 2025 All rights reserved. | Version 1.0.0</p>
+        <p>Developed by SkTech | <a href="#" style="color: #3498db; text-decoration: none;">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

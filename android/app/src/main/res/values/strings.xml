@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SkTech</string>
+    <string name="title_activity_main">SkTech</string>
+    <string name="package_name">com.sktech.expense</string>
+    <string name="custom_url_scheme">com.sktech.expense</string>
+</resources>

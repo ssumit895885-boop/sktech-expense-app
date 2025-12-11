@@ -1,0 +1,207 @@
+/* Global Reset and Mobile Focus */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* हल्का नीला बैकग्राउंड */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main App Container for Mobile View */
+.app-container {
+    max-width: 600px; /* मोबाइल पर अच्छी चौड़ाई */
+    margin: 0 auto; /* कंटेंट को बीच में रखता है */
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50; /* गहरा नीला/ग्रे */
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* --- Card Styling for Components --- */
+.dashboard-card, .form-card, .list-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* हल्का शैडो */
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #34495e;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- Summary (Dashboard) Styling --- */
+.summary p {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* इनकम और खर्च के लिए विशिष्ट रंग */
+.income-amount {
+    color: #27ae60;
+    font-weight: bold;
+}
+.expense-amount {
+    color: #e74c3c;
+    font-weight: bold;
+}
+.remaining {
+    font-weight: 600 !important;
+}
+#budget-remaining {
+    color: #3498db;
+}
+
+
+/* --- Form Styling --- */
+.form-card input, .form-card select, .form-card button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; 
+    font-size: 1em;
+}
+
+.form-card button {
+    background-color: #2ecc71; /* हरा बटन */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.form-card button:hover {
+    background-color: #27ad60;
+}
+
+/* --- Transaction List Styling --- */
+.list-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+.list-card li:last-child {
+    border-bottom: none;
+}
+
+.list-details {
+    flex-grow: 1; 
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-date {
+    font-size: 0.8em;
+    color: #7f8c8d;
+    min-width: 80px;
+}
+
+.list-category {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.list-description {
+    font-size: 0.8em;
+    color: #7f8c8d;
+}
+
+.list-amount {
+    font-weight: 600;
+    min-width: 60px;
+    text-align: right;
+}
+
+/* आय (Income) और खर्च (Expense) के लिए रंग */
+.plus {
+    color: #27ae60;
+}
+.minus {
+    color: #e74c3c;
+}
+
+/* --- Action Buttons (Edit and Delete) --- */
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 5px;
+    padding: 5px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    line-height: 1;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 1;
+}
+
+.delete-btn {
+    color: #e74c3c; /* लाल रंग */
+}
+
+/* --- Category Bar Chart Styling --- */
+.chart-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.chart-container h4 {
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.chart-bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.chart-label {
+    width: 40%;
+    font-weight: 500;
+    color: #7f8c8d;
+    margin-right: 5px;
+}
+
+.chart-bar {
+    height: 12px;
+    background-color: #3498db;
+    border-radius: 6px;
+    flex-grow: 1; 
+    margin-right: 5px;
+}
+
+.chart-value {
+    width: 50px; 
+    text-align: right;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.9em;
+}
